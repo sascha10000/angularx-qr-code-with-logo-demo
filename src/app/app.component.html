@@ -1,0 +1,6 @@
+<div class="content">
+  <input type="text" [(ngModel)]="imgURL" placeholder="URL to some Image"/><br/>
+  <input type="text" [(ngModel)]="textValue" placeholder="Data for QR-Code" /><br/>
+  <qr-code [value]="textValue" [size]="500" level="H" canvas="true" #qrCode></qr-code><br/>
+  <button (click)="createQRWithImage()" [disabled]="imgURL == '' || textValue == ''">Generate QR & Downlaod</button>
+</div>
